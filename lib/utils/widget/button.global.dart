@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:garage_auto/app/modules/services/auth_service.dart';
 import 'package:garage_auto/app/routes/app_pages.dart';
 import 'package:garage_auto/utils/style/global.colors.dart';
 import 'package:get/get.dart';
+import 'package:garage_auto/app/modules/data/controller/auth_controller.dart';
 
 class ButtonGlobal extends StatelessWidget {
-  const ButtonGlobal({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Get.toNamed('/home');
-      },
+      // onTap: () => authC.signInWithGoogle(),
       child: Container(
         alignment: Alignment.center,
         height: 55,

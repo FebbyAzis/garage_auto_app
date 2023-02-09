@@ -7,6 +7,14 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const HOME = _Paths.HOME;
   static const REGISTER = _Paths.REGISTER;
+  static const MERK = _Paths.MERK;
+  static const MERK_MOBIL = _Paths.MERK_MOBIL;
+  static const MERKMOBIL = _Paths.MERKMOBIL;
+  static const MERKMOTOR = _Paths.MERKMOTOR;
+  static const MODELMOTOR = _Paths.MODELMOTOR;
+  static const MODELMOBIL = _Paths.MODELMOBIL;
+  static const PREVIEWMOBIL = _Paths.PREVIEWMOBIL;
+  static const PREVIEWMOTOR = _Paths.PREVIEWMOTOR;
 }
 
 abstract class _Paths {
@@ -15,4 +23,12 @@ abstract class _Paths {
   static const HOME = '/home';
   static const REGISTER = '/register';
   static const LOGIN = '/login';
+  static const MERK = '/merk';
+  static const MERK_MOBIL = '/merk-mobil';
+  static const MERKMOBIL = '/merkmobil';
+  static const MERKMOTOR = '/merkmotor';
+  static const MODELMOTOR = '/modelmotor';
+  static const MODELMOBIL = '/modelmobil';
+  static const PREVIEWMOBIL = '/previewmobil';
+  static const PREVIEWMOTOR = '/previewmotor';
 }
