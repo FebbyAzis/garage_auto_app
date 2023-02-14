@@ -11,28 +11,77 @@ import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 
-
-Future <void> main() async {
+Future<void> main(async) async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-     options: DefaultFirebaseOptions.currentPlatform,
+    options: DefaultFirebaseOptions.currentPlatform,
   );
-    // options: DefaultFirebaseOption.currentPlatform,
-    Get.put(AuthController(), permanent: true);
-  runApp(
-    StreamBuilder<User?>(
-      stream: FirebaseAuth.instance
-      .authStateChanges(),
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  final authC = Get.put(AuthController(), permanent: true);
+  @override
+  Widget build(BuildContext context){
+    return StreamBuilder<User?>(
+      stream: authC.streamAuthStatus,
       builder: (context, snapshot) {
+        
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
         }
-        return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Application",
-      initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
-      getPages: AppPages.routes,
+          print(snapshot.data);
+
+          return GetMaterialApp(
+      title: "Garage Auto",
+      initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN  ,
+      getPages: AppPages.routes ,
     );
-      },)
-  );
-}
+        
+        
+    },
+    );
+   }
+    }
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Future <void> main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp(
+//      options: DefaultFirebaseOptions.currentPlatform,
+//   );
+//     // options: DefaultFirebaseOption.currentPlatform,
+//     Get.put(AuthController(), permanent: false);
+//   runApp(
+//     StreamBuilder<User?>(
+//       stream: FirebaseAuth.instance
+//       .authStateChanges(),
+//       builder: (context, snapshot) {
+//         if (snapshot.connectionState == ConnectionState.waiting) {
+//           return const Center(child: CircularProgressIndicator());
+//         }
+//         return GetMaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: "Application",
+//       initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
+//       getPages: AppPages.routes,
+//     );
+//       },)
+//   );
+// }

@@ -49,7 +49,7 @@ class RegisterView extends GetView<RegisterController> {
                   controller: emailController,
                   text: 'Email',
                   obscure: false,
-                  textInputType: TextInputType.emailAddress,
+                  textInputType: TextInputType.emailAddress, 
                 ),
                 const SizedBox(height: 10),
                 // password input
@@ -57,7 +57,7 @@ class RegisterView extends GetView<RegisterController> {
                   controller: passwordController,
                   textInputType: TextInputType.text,
                   obscure: true,
-                  text: 'Password',
+                  text: 'Password', 
                 ),
                 const SizedBox(height: 10),
                 // confirm password input
@@ -65,7 +65,7 @@ class RegisterView extends GetView<RegisterController> {
                   controller: confirmpasswordController,
                   textInputType: TextInputType.text,
                   obscure: true,
-                  text: 'Confirm Password',
+                  text: 'Confirm Password', 
                 ),
                 
 

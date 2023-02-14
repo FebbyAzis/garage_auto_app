@@ -15,6 +15,9 @@ abstract class Routes {
   static const MODELMOBIL = _Paths.MODELMOBIL;
   static const PREVIEWMOBIL = _Paths.PREVIEWMOBIL;
   static const PREVIEWMOTOR = _Paths.PREVIEWMOTOR;
+  static const HOMEADMIN = _Paths.HOMEADMIN;
+  static const CREATEMERKMOBIL = _Paths.CREATEMERKMOBIL;
+  static const MERKMOBILADMIN = _Paths.MERKMOBILADMIN;
 }
 
 abstract class _Paths {
@@ -31,4 +34,7 @@ abstract class _Paths {
   static const MODELMOBIL = '/modelmobil';
   static const PREVIEWMOBIL = '/previewmobil';
   static const PREVIEWMOTOR = '/previewmotor';
+  static const HOMEADMIN = '/homeadmin';
+  static const CREATEMERKMOBIL = '/createmerkmobil';
+  static const MERKMOBILADMIN = '/merkmobiladmin';
 }

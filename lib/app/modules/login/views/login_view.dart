@@ -10,9 +10,8 @@ import 'package:ionicons/ionicons.dart';
 
 class LoginView extends StatelessWidget {
   final authC = Get.find<AuthController>();
-  
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +47,7 @@ class LoginView extends StatelessWidget {
                   text: 'Email',
                   obscure: false,
                   textInputType: TextInputType.emailAddress,
+                  
                 ),
                 const SizedBox(height: 10),
                 // password input
@@ -55,7 +55,7 @@ class LoginView extends StatelessWidget {
                   controller: passwordController,
                   textInputType: TextInputType.text,
                   obscure: true,
-                  text: 'Password',
+                  text: 'Password', 
                 ),
                 const SizedBox(height: 15),
                 InkWell(
@@ -71,6 +71,9 @@ class LoginView extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 20),
+                // ElevatedButton(onPressed: () => authC.login(emailController.text, passwordController.text), 
+                // child: Text("Login"),
+                
                 //  Button
                 // ElevatedButton(
                 //   onPressed: () {
